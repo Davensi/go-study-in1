@@ -1,0 +1,58 @@
+# Go modules
+/go.mod
+/go.sum
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, build output
+*.test
+*.out
+
+# Output of the go coverage tool
+*.cover
+*.cov
+
+# Logs and debug files
+*.log
+*.trace
+*.prof
+*.pprof
+
+# Dependency directories (vendor/)
+vendor/
+
+# IDE/editor-specific files
+.idea/
+.vscode/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+
+# Build directory
+bin/
+build/
+dist/
+
+# Temporary files generated during builds
+*.o
+*.a
+
+# Coverage files
+coverage/
+*.cov
+
+# Ignore by default
+*.env
+*.key
+*.cert

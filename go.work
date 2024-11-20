@@ -1,0 +1,12 @@
+go 1.20
+
+use (
+    common
+    user
+    hall
+    core
+    framework
+    game
+    connerctor
+    
+)
