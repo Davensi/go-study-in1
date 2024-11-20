@@ -71,7 +71,7 @@ type Config struct {
 	Log        LogConf                   `mapstructure:"log"`
 	Port       int                       `mapstructure:"port"`
 	WsPort     int                       `mapstructure:"WsPort"`
-	MetricPort int                       `mapstructure:"metricPort"`
+	MetricPort int                       `mapstructure:"metricPort"` // 实时监控端口
 	HttpPort   int                       `mapstructure:"httpPort"`
 	AppName    string                    `mapstructure:"appName"`
 	Database   Database                  `mapstructure:"database"`
@@ -100,7 +100,7 @@ func IninConfig(configFile string) {
 		}
 		log.Println("配置重载成功")
 	}) 
-	
+
 	// 读取配置文件
 	err := v.ReadInConfig()
 	if err != nil {

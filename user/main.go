@@ -1,21 +1,27 @@
 package main
 
 import (
+	"common/config"
+	"common/metrics"
 	"flag"
 	"fmt"
-	"common/config"
 )
 
-var conf = flag.String("conf","./application.yml","conf file")
+var conf = flag.String("conf", "./application.yml", "conf file")
+
 func main() {
+
 	// 1.加载配置
 	flag.Parse()
 	config.IninConfig(*conf)
-	fmt.Println("加载配置成功",config.Conf)
+
 	// 2.启动监控
+	go func() {
+		if err := metrics.Serve(fmt.Sprintf("0.0.0.0:%d", config.Conf.MetricPort)); err != nil {
+			print("实时监控错误--->",err)
+		}
+	}()
 	// 3.启动grpc服务
 
-	select {
-		
-	}
+	select {}
 }
