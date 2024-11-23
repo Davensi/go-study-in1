@@ -23,8 +23,6 @@ func InitLog(appName string) {
 	//logger.SetLevel(log.InfoLevel)
 }
 
-
-
 func Fatal(format string, args ...any) {
     if (len(args) == 0) {
         logger.Fatal(format)
@@ -56,6 +54,7 @@ func Debug(format string, args ...any) {
 		logger.Debugf(format, args...)
 	}
 }
+
 func Error(format string, args ...any) {
     if (len(args) == 0) {
         logger.Error(format)

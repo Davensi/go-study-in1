@@ -18,6 +18,7 @@ func Run(ctx context.Context) error {
 	// 1.启动一个日志库 info error fatal debug
 	logs.InitLog(config.Conf.AppName)
 	// 2,etcd注册中心 grpc服务注册到etcd中 刻画段访问的时候 通过etxd获取grpc服务地址
+	
 	// 启动grpc服务
 	server := grpc.NewServer()
 
